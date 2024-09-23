@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert TXT to VCF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Convert TXT to VCF</h1>
+
+        <div class="input-section">
+            <!-- Input untuk nama kontak -->
+            <label for="adminName">Masukkan nama untuk Admin:</label>
+            <input type="text" id="adminName" placeholder="Contoh: Admin Kontak">
+
+            <label for="navyName">Masukkan nama untuk Navy:</label>
+            <input type="text" id="navyName" placeholder="Contoh: Navy Kontak">
+
+            <label for="anggotaName">Masukkan nama untuk Anggota:</label>
+            <input type="text" id="anggotaName" placeholder="Contoh: Anggota Kontak">
+
+            <label for="vcfFileName">Masukkan nama file VCF:</label>
+            <input type="text" id="vcfFileName" placeholder="Contoh: nama_file_vcf">
+
+            <!-- Upload TXT (opsional) -->
+            <label for="txtFile">Pilih File TXT berisi nomor telepon (opsional):</label>
+            <input type="file" id="txtFile" accept=".txt">
+            
+            <button onclick="convertTxtToVcf()">Convert to VCF</button>
+        </div>
+
+        <!-- Kolom Hasil Konversi -->
+        <h3>Hasil Konversi:</h3>
+        <textarea id="vcfOutput" rows="15" placeholder="admin\n6285648411149\n6282111920329\n\nnavy\n6281559905069\n\nanggota\n6281333525983\n"></textarea>
+        <button onclick="downloadVCF()">Download VCF</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
